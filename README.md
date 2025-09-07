@@ -6,12 +6,13 @@ EventBridge (schedule) → Lambda (OpenWeather) → S3 (partitioned) → Glue Cr
 ## Architecture
 ```mermaid
 flowchart LR
-    EB[EventBridge\nScheduler (hourly)] --> L[Lambda\nweather_ingest]
-    L -->|JSON per city/hour| S3[(Amazon S3\nraw/city=.../dt=.../hour=.../)]
-    S3 --> GC[Glue Crawler\n(hourly/daily)]
-    GC --> DC[Glue Data Catalog\nweather_data.inam_weather_data]
-    DC --> A[Athena\nSQL queries]
-    A --> QS[QuickSight\n(optional dashboard)]
+    EB[EventBridge<br>Scheduler (hourly)] --> L[Lambda<br>weather_ingest]
+    L -->|JSON per city/hour| S3[(Amazon S3<br>raw/city=.../dt=.../hour=.../)]
+    S3 --> GC[Glue Crawler<br>(hourly/daily)]
+    GC --> DC[Glue Data Catalog<br>weather_data.inam_weather_data]
+    DC --> A[Athena<br>SQL queries]
+    A --> QS[QuickSight<br>(optional dashboard)]
+
 ```
 
 ## What it does
