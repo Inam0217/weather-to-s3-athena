@@ -4,14 +4,7 @@ Serverless data pipeline on AWS:
 EventBridge (schedule) → Lambda (OpenWeather) → S3 (partitioned) → Glue Crawler (catalog) → Athena (SQL). Optional QuickSight.
 
 ## Architecture
-```mermaid
-flowchart LR
-    EB[EventBridge Scheduler (hourly)] --> L[Lambda weather_ingest]
-    L -->|JSON per city/hour| S3[(Amazon S3 raw/city=.../dt=.../hour=.../)]
-    S3 --> GC[Glue Crawler (hourly/daily)]
-    GC --> DC[Glue Data Catalog weather_data.inam_weather_data]
-    DC --> A[Athena SQL queries]
-    A --> QS[QuickSight (optional dashboard)]
+![Architecture Diagram](assets/aws_weather_etl_architecture.png)
 
 ```
 
