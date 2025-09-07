@@ -4,6 +4,16 @@ Serverless data pipeline on AWS: EventBridge (schedule) → Lambda (OpenWeather)
 
 ---
 
+## Tech Stack
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazonaws)
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![Athena](https://img.shields.io/badge/Athena-SQL-lightblue?logo=amazonaws)
+![S3](https://img.shields.io/badge/S3-Storage-green?logo=amazons3)
+![Lambda](https://img.shields.io/badge/AWS-Lambda-yellow?logo=awslambda)
+![Glue](https://img.shields.io/badge/AWS-Glue-purple?logo=amazonaws)
+
+---
+
 ## Architecture
 
 <p align="center">
@@ -85,16 +95,6 @@ LIMIT 10;
 - Extend Lambda to fetch **more cities globally**.
 - Store data in **Parquet** for cost optimization in Athena.
 - Automate with **CI/CD pipeline** (GitHub Actions + Terraform).
-
----
-
-## Tech Stack
-![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazonaws)
-![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
-![Athena](https://img.shields.io/badge/Athena-SQL-lightblue?logo=amazonaws)
-![S3](https://img.shields.io/badge/S3-Storage-green?logo=amazons3)
-![Lambda](https://img.shields.io/badge/AWS-Lambda-yellow?logo=awslambda)
-![Glue](https://img.shields.io/badge/AWS-Glue-purple?logo=amazonaws)
 
 ---
 
